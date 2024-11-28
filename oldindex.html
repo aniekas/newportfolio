@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .word-art {
+            font-size: 5em;
+            color: black;
+            text-align: center;
+            margin-top: 20vh;
+            font-weight: bolder;
+        }
+        .blurb-container {
+            display: flex;
+            justify-content: center;
+        }
+        .blurb {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: black;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .cmy-button {
+            background: linear-gradient(90deg, rgb(255, 82, 171), yellow, rgb(58, 255, 255));
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-bottom: 3px solid black;
+            border-right: 3px solid black;
+            padding: 10px 20px;
+            font-size: 1em;
+            font: inherit;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .cmy-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scrolling text below navbar -->
+    
+    <div class="item">
+        <div class="item-slide">
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+               
+        </div>
+        <div class="item-slide">
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+            <item>  WELCOME TO MY PORTFOLIO!  </item>
+           
+        </div>
+    </div>
+
+    <div class="word-art">Anieka Seemakurti</div>
+    <div class="blurb-container">
+        <div class="blurb">Hi, I’m Anieka! I’m a Computational Media major at Georgia Tech with a thread in People & Interaction design.</div>
+    </div>
+    <div class="button-container">
+        <button class="cmy-button" onclick="location.href='about.html'">About Me</button>
+        <button class="cmy-button" onclick="location.href='projects.html'">Projects</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.scrollText').classList.add('is-active');
+            const heroTitle = document.querySelector('.hero-title');
+
+            if (heroTitle) {
+                setTimeout(() => {
+                    heroTitle.classList.add('animate');
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>

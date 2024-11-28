@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('Fonts/WEB/fonts/ClashDisplay-Variable.eot'); /* IE9 Compat Modes */
+  src: url('Fonts/WEB/fonts/ClashDisplay-Variable.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Fonts/WEB/fonts/ClashDisplay-Variable.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Fonts/WEB/fonts/ClashDisplay-Variable.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Fonts/WEB/fonts/ClashDisplay-Variable.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: 200 700;
+  font-style: normal;
+}
+
+/* General styles */
+body {
+  background-color: rgb(165, 97, 165);
+  color: rgb(10, 1, 14);
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+title-body{
+  background-color: rgb(165, 97, 165);
+  color: rgb(10, 1, 14);
+  font-family: ClashDisplay-Variable, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: rgba(165, 97, 165, 0.9);
+  z-index: 100; /* Ensure the navbar is on top */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  background-color: rgb(10, 1, 14); /* Semi-transparent background for buttons */
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+header {
+  margin-top: 120px; /* Push header below the nav bar */
+}
+
+h1, h2 {
+  margin: 0;
+  font-family: 'ClashDisplay-Variable', Helvetica, sans-serif; /* Use Clash Display for h1 */
+}
+
+h1 {
+  font-size: 10em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 10em;
+  text-transform: uppercase;
+}
+
+/* Project Cards */
+.project-cards {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: rgba(68, 68, 68, 0.9);
+  color: #fffaf8;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 450px;
+}
+
+.learn-more-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #555;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(165, 97, 165, 0.9);
+  color: #fff;
+}
